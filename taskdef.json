@@ -18,6 +18,7 @@
         "options": {
           "awslogs-group": "/ecs/nginx-sample",
           "awslogs-region": "AWS_REGION",
+          "awslogs-create-group": "true",
           "awslogs-stream-prefix": "nginx-sample"
         }
       }

@@ -2,7 +2,7 @@
   "containerDefinitions": [
     {
       "name": "nginx",
-      "image": "REPOSITORY_URI:latest",
+      "image": "REPOSITORY_URI:IMAGE_TAG",
       "portMappings": [
         {
           "containerPort": 80,
@@ -24,8 +24,8 @@
       }
     }
   ],
-  "taskRoleArn": "arn:aws:iam::883505381142:role/ecsTaskExecutionRole",
-  "executionRoleArn": "arn:aws:iam::883505381142:role/ecsTaskExecutionRole",
+  "taskRoleArn": "TASK_EXECUTION_ARN",
+  "executionRoleArn": "TASK_EXECUTION_ARN",
   "family": "nginx-sample",
   "networkMode": "awsvpc",
   "requiresCompatibilities": [

@@ -2,7 +2,7 @@
   "containerDefinitions": [
     {
       "name": "nginx",
-      "image": "REPOSITORY_URI:IMAGE_TAG",
+      "image": "883505381142.dkr.ecr.ap-northeast-2.amazonaws.com/fastcampus:latest",
       "portMappings": [
         {
           "containerPort": 80,
@@ -17,15 +17,15 @@
         "logDriver": "awslogs",
         "options": {
           "awslogs-group": "/ecs/nginx-sample",
-          "awslogs-region": "AWS_REGION",
+          "awslogs-region": "ap-northeast-2",
           "awslogs-create-group": "true",
           "awslogs-stream-prefix": "nginx-sample"
         }
       }
     }
   ],
-  "taskRoleArn": "TASK_EXECUTION_ARN",
-  "executionRoleArn": "TASK_EXECUTION_ARN",
+  "taskRoleArn": "arn:aws:iam::883505381142:role/ecsTaskExecutionRole",
+  "executionRoleArn": "arn:aws:iam::883505381142:role/ecsTaskExecutionRole",
   "family": "nginx-sample",
   "networkMode": "awsvpc",
   "requiresCompatibilities": [
